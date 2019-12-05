@@ -1,0 +1,254 @@
+Alphabet
+
+	a b c ç d e f g ğ h i j k l m n o p r s ş t u v y z x ǩ ť ṕ ḉ ʒ ǯ ž 
+	A B C Ç D E F G Ğ H İ J K L M N O P R S Ş T U V Y Z X Ǩ Ť Ṕ Ḉ Ʒ Ǯ Ž 
+
+%{R%}:r %{R%}:0
+
+%{G%}:g %{G%}:k %{G%}:ǩ
+
+%{B%}:v %{B%}:b %{B%}:p %{B%}:ṕ %{B%}:m %{B%}:0		! Assimilation of person prefix based on the laryngel properties of the first sound in stem
+
+%{I%}:i %{I%}:y
+
+%{I2%}:e %{I2%}:i 
+
+
+
+%{O%}:o %{O%}:v %{O%}:0
+
+%{O2.2%}:o %{O2.2%}:v
+
+%{O2.1%}:o %{O2.1%}:0
+
+%{O2.3%}:o %{O2.3%}:0
+
+%{O2.4%}:0 %{O2.4%}:o
+
+%{O3.1%}:o %{O3.1%}:0 %{O3.1%}:e 
+
+%{O3.2%}:o %{O3.2%}:0 %{O3.2%}:v
+
+%{O4%}:o %{O4%}:e %{O4%}:v %{O4%}:0
+
+%{O5%}:o %{O5%}:e %{O5%}:v %{O5%}:0
+
+%{A%}:a %{A%}:e %{A%}:0
+
+%{A5%}:a %{A5%}:e %{A5%}:0 %{A5%}:o %{A5%}:v
+
+%{A4%}:a %{A4%}:0 %{A4%}:o %{A4%}:v
+
+%{A3%}:a %{A3%}:0 %{A3%}:o
+
+%{A3.2%}:a %{A3.2%}:e %{A3.2%}:0
+
+%{E%}:e %{E%}:0
+
+%{M%}:m %{M%}:n
+
+%{N%}:n %{N%}:0
+
+
+%{S%}:s %{S%}:n
+
+%{Y%}:y %{Y%}:0
+
+%{V%}:v %{V%}:0
+
+%{R1%}:r %{R1%}:0
+
+%{E1%}:e %{E1%}:0
+
+%{E2%}:e %{E2%}:0
+
+
+
+%{SS%}:s %{SS%}:0
+;
+
+Sets
+
+Vowel = a o u e i;
+VoicedC = b d g z j ğ v c m; 
+Voiceless = p t k ç f s ş x; 
+Ejectives = ǩ ť ṕ ḉ ǯ ž;
+Nasals = m n;
+
+Rules 
+
+"Deletion of archiphoneme {R} appearing in thematic suffixes before archiphoneme {S}"
+%{R%}:0 <=> _ %>: %{S%}: ;
+
+"Deletion of archiphoneme {V} appearing in stem-finally when followed by a suffix starting with [u] sound"
+%{V%}:0 <=> _ %>: u ;
+
+"Assimilation of laryngeal properties of archiphoneme {B} as person prefix before vowel"
+%{B%}:v <=> _ %>: [ Vowel: | %{I%}: ] ;
+
+"Assimilation of laryngeal properties of archiphoneme {B} as person prefix before voiced consonants except [b] sound"
+%{B%}:b <=> _ %>: VoicedC: ;
+	except _ %>: b ;
+
+"Deletion of archiphoneme {B} as person prefix because of a possible two consequent labiovelar combination"
+%{B%}:0 <=> _ %>: b ;
+
+!"Assimilate person prefix to p- before voiceless sounds"
+!%{B%}:p <=> _ %>: [ Voiceless: | x ] ;
+
+"Assimilation of laryngeal properties of archiphoneme {B} as person prefix to before ejectives"
+%{B%}:ṕ <=> _ %>: Ejectives: ;
+
+"Assimilation of laryngeal properties of archiphoneme {B} as person prefix before stem initial [n] sound"		! (ṕ- is also possible: ask!!!)
+ %{B%}:m <=> _ %>: %{N%}:;
+
+"Assimilation of laryngeal properties of archiphoneme {G} as person prefix before voiced sounds"
+%{G%}:g <=> _ %>: [VoicedC: | Vowel: | %{N%}: |%{I%}:] ;
+
+"Assimilation of laryngeal properties of archiphoneme {G} as person prefix before voiceless sounds"
+%{G%}:k <=> _ %>: Voiceless: ;
+
+"Assimilation of laryngeal properties of archiphoneme {G} as person prefix before ejectives"
+%{G%}:ǩ <=> _ %>: Ejectives: ;
+
+"Stem-final vowel -i turns into -e when followed by plural suffix -pe"
+%{I2%}:e <=> _ %>: pe ;
+
+"Valency-related vowel i- turns into y- after o-" ! oftern turns into???
+%{I%}:y <=> o %>: _ ;
+
+"Delete final vowel a-"
+%{A%}:0 <=> _ %>: [i|u|o|%{I%}:];
+	
+"Delete 3rd person plural a  "
+%{A%}:0 <=>  Vowel: [ %{R%}:0 | %>: ] %>: _ n ;		
+
+"Change final vowel a- to e-"
+%{A%}:e <=> _ %>: [v|m] %>: [i|u|o|%{I%}:];
+
+
+"Deletion of initial nasal before person prefix"
+%{N%}:0 <=> %{B%}: %>: _ ḉ ;
+
+"Delete r for supleteion"
+%{R1%}:0 <=> _ %{E1%}: %>: %{S%}: ;
+
+"Delete final vowel a-"
+%{E1%}:0 <=> _ %>: [%{S%}: | ť ] ;
+
+
+"Delete final vowel o-"
+%{O%}:0 <=> _ %>: [Vowel: | %{I%}: ];
+	except d _ %>: [e|a|o];
+	
+	
+"Delete final vowel o- before a vowel"
+%{O2.3%}:0 <=> _ %>: [Vowel: |%{I%}:];
+
+"Change final vowel o- to v-"
+%{O%}:v <=> d _ %>: a;
+
+"Change final vowel o- to e-"
+%{O%}:e <=> _ %>: [v|m] %>: [i|u|o|%{I%}:];
+
+
+!"Delete thematic suffix -ur's consonant -r"
+!%{R%}:0 <=> _ %>: [n|t|ť];
+
+"Delete initial vowel -e in future tense"
+%{E%}:0 <=> _ %>: [Vowel: | %{I%}:];
+
+"Change final vowel o- to e-"
+%{M%}:n <=> _ %{E%}:0 %>: [i|u|o|%{I%}:];
+
+"Delete initial vowel -e in future tense"
+%{E2%}:0 <=> Vowel: %>:  _ ;
+
+
+
+"Change non-past 3rd person suffix"
+%{S%}:n <=> [%{R%}: |%{E1%}: ] %>: _  ;
+
+"Question marker before 'u"
+%{Y%}:u <=> u %>: _  ;
+
+"Delete final vowel a- for preverbs"
+%{A4%}:0 <=> _ %>: [i|u|o|%{I%}:];
+
+"Vowel -v alternation in preverbs-1"
+%{A4%}:v <=> _ %>: [a|%{A%}:a];
+
+"Vowel -v alternation in preverbs"
+%{A4%}:o <=> _ %>: [lva|ğ|yon];
+
+"Final vowel deletion in preverbs"
+%{A3%}:0 <=> _ %>: [i|u|o|%{I%}:];
+
+"Final vowel deletion in preverbs=="
+%{A3.2%}:0 <=> _ %>: Vowel: ;
+
+"Final vowel deletion in preverbs=="
+%{A3.2%}:0 <=> _ %>: [m|%{G%}: | %{B%}:] ;
+
+"Combination with valency and person markers"
+%{A3%}:o <=> _ %>: [%{G%}:g|%{B%}:v|m];
+
+"Combination with valency and person markers-3"
+%{A5%}:e <=> _ %>: [%{G%}:g|%{B%}:v|m];
+
+"Combination with valency and person markers-2"
+%{A5%}:o <=> _ %>: [lva|ğ|yon];
+
+"Vowel -v alternation in preverbs-4"
+%{A5%}:v <=> _ %>: [a|%{A%}:a];
+
+"Final vowel deletion in preverbs-22"
+%{A5%}:0 <=> _ %>: [i|u|o|%{I%}:];
+
+"Final vowel deletion in preverbs-3"
+%{O3.1%}:0 <=> _ %>: [i|u|o|%{I%}:];
+
+"Combination with valency and person markers-4"
+%{O3.1%}:e <=> _ %>: [%{G%}:g|%{B%}:v|m];
+
+"Final vowel deletion in preverbs-323"
+%{O3.2%}:0 <=> _ %>: [i|u|o|%{I%}:|%{E%}:];
+
+"Final vowel deletion in preverbs-323"
+%{O3.2%}:v <=> _ %>: [a|%{A%}:a];
+
+"Combination with valency and person markers-435"
+%{O3.2%}:e <=> _ %>: [%{G%}:g|%{B%}:v|m];
+
+"Final vowel deletion in preverbs-4"
+%{O2.1%}:0 <=> _ %>: [i|u|o|%{I%}:];
+
+"Final vowel deletion in preverbs-4"
+%{O2.2%}:v <=> _ %>: [a|%{A%}:a];
+
+"Final vowel deletion in preverbs-4556"
+%{O2.4%}:0 <=> _ %>: [%{I%}: | Vowel:];
+
+"Final vowel deletion in preverbs-5"
+%{O4%}:0 <=> _ %>: [i|u|o| %{I%}: ];
+
+"Combination with valency and person markers-5gfdc"
+%{O4%}:e <=> _ %>: [ %{G%}:g |%{B%}:v |m] ;
+
+"Final vowel deletion in preverbs-5"
+%{O4%}:v <=> _ %>: [a|%{A%}:a];
+
+"Final vowel deletion in preverbs-56"
+%{O5%}:0 <=> _ %>: [i|u|o| %{I%}: ];
+
+"Combination with valency and person markers-5"
+%{O5%}:e <=> _ %>: [ %{G%}:g |%{B%}:v ] ;
+
+"Final vowel deletion in preverbs-5hgfj"
+%{O5%}:v <=> _ %>: [a|%{A%}:a];
+
+"Delete final -s"
+%{SS%}:0 <=> Vowel: %>: _ ;
+
+"Remove morpheme boundary"
+%>:0 <=> _ ;
