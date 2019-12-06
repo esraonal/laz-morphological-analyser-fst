@@ -91,3 +91,5 @@ Currently up to 68% coverage over 111,365 tokens.
 
 ### Challenges: (yet to be resolved)
 - how to add dialectical differences??
+
+For any comments or suggestions please send me an e-mail.  My e-mail address is esra.onal@boun.edu.tr
