@@ -61,10 +61,7 @@ Randomly selected 100 tokens that are not analyzed by the transducer are examine
 (details can be found in the paper)
 
 ### What is next?
->> a gold standard corpus to test the analyser (we still do not know for sure that our analysis on word forms are correct)
->> adding lexemes from all dialects
->> 
->> ???
+a gold standard corpus to test the analyser (we still do not know for sure that our analysis on word forms are correct) adding lexemes from all dialects
 
 ### Challenges: (yet to be resolved)
 how to add dialectical differences??
