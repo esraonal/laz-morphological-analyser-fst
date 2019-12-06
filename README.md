@@ -69,7 +69,7 @@ Lacroix, R. (2009). Description du dialecte laze d’Arhavi (caucasique du sud, 
 Didi Lazuri Nenapuna (Büyük Lazca Sözlük) by İsmail Bucaklişi, Hasan Uzunhasanoğlu, İrfan Aleksiva
 
 - Other resources: (used to create a corpus to test the analyser on)
-Documents written in Laz are provided by Ismail Bucaklisi
+Documents written in Laz are provided by Ismail Bucaklisi (since it is a private document, it is not published here, but to test the analyser, there is a small document containing a short tale in Pazar Laz and a glosed version of it as a png file taken from Ozturk & Pöchtrager (2011) grammar book)
 
 ### Results
 Coverage:
