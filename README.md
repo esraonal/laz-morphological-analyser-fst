@@ -20,25 +20,39 @@ https://github.com/hfst/hfst/wiki/Command-Line-Tools
 After installation, follow the steps
 
 #### 1. Compile the lexicon file
-```$ hfst-lexc pazar.laz.lexc -o pazar.laz.lexc.hfst```
+```
+$ hfst-lexc pazar.laz.lexc -o pazar.laz.lexc.hfst
+```
 
 #### 2. Compile the two-level grammar file
-```$ hfst-lexc pazar.laz.twol -o pazar.laz.twol.hfst```
+```
+$ hfst-lexc pazar.laz.twol -o pazar.laz.twol.hfst
+```
 
 #### 3. Compose the two transducers
-```$ hfst-compose-intersect -1 pazar.laz.lexc.hfst -2 pazar.laz.twol.hfst -o pazar.laz.gen.hfst```
+```
+$ hfst-compose-intersect -1 pazar.laz.lexc.hfst -2 pazar.laz.twol.hfst -o pazar.laz.gen.hfst
+```
 
 #### 4. Display the strings recognized by a transducer
-```hfst-fst2strings -X obey-flags pazar.laz.gen.hfst```
+```
+$ hfst-fst2strings -X obey-flags pazar.laz.gen.hfst
+```
 
 An example
-```xordza<n><erg>:xordzak```
+```
+xordza<n><erg>:xordzak
+```
   
 #### 4. Invert a transducer
-```hfst-invert -i pazar.laz.gen.hfst -o pazar.laz.mor.hfst```
+```
+$ hfst-invert -i pazar.laz.gen.hfst -o pazar.laz.mor.hfst
+```
 
 #### 5. Look up a set of input strings in the transducer and print the corresponding output strings.
-```hfst-lookup -qp pazar.laz.mor.hfst```
+```
+$ hfst-lookup -qp pazar.laz.mor.hfst
+```
 
 
 ### Language sources
