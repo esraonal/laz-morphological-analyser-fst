@@ -1,5 +1,7 @@
 This project is licensed under the CreativeCommons BY-NC-SA 3.0.
 
+Still in progress
+
 # laz-morphological-analyser-fst
 This is a project that proposes a finite-state morphological analyser for Pazar-Atina dialect of Laz Language,  a member of South Caucasian language  family  mainly  spoken  on  northeastern  coastline  of  Turkey.  It constitutes  the  first  steps  to  create  a  general  computational  model  for word-form  recognition  and  production  for  Laz  by  building  a  rule-based morphological analyser based on Xerox Lexc (lexicon) and Twolc (two-level grammar) formalism/programming languages to define morphotactic rules and morphophonological alternations, respectively.  Additionally, HFST(Helsinki Finite-State Technology) command line tools are used to compile lexc and twol files into transducers.
 
