@@ -87,9 +87,6 @@ Currently up to 68% coverage over 111,365 tokens.
 
 ### What is next?
 - a gold standard corpus to test the analyser (we still do not know for sure that our analysis on word forms are correct)
-- adding lexemes from all dialects
-
-### Challenges: (yet to be resolved)
-- how to add dialectical differences??
+- an analyser to cover all dialects
 
 For any comments or suggestions please send me an e-mail.  My e-mail address is esra.onal@boun.edu.tr
