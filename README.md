@@ -62,14 +62,17 @@ $ hfst-lookup -qp pazar.laz.mor.hfst < pazar.laz.tale.txt
 
 ### Language sources
 - Grammar books: (used to define morhotactic rules and mophophonological alternations)
+
 Öztürk, B. & M. Pöchtrager (Eds.) (2011). Pazar Laz. LINCOM: Languages of the World Materials 484, Münich: LINCOM EUROPA.
 
 Lacroix, R. (2009). Description du dialecte laze d’Arhavi (caucasique du sud, Turquie). Grammaire et textes(Doctoral dissertation, Université Lumière Lyon 2; xxii+901pp.)
 
 - Dictionary: (used to add lexemes into the lexcicon file)
+
 Didi Lazuri Nenapuna (Büyük Lazca Sözlük) by İsmail Bucaklişi, Hasan Uzunhasanoğlu, İrfan Aleksiva
 
 - Other resources: (used to create a corpus to test the analyser on)
+
 Documents written in Laz are provided by Ismail Bucaklisi 
 
 ### Results
