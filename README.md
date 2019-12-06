@@ -79,7 +79,7 @@ Documents written in Laz are provided by Ismail Bucaklisi
 - Coverage:
 Currently up to 68% coverage over 111,365 tokens.
 
-- Since the main corpus for Pazar Laz (with 111,365 tokens) consists of a private document, it is not published here, but to test the analyser, there is a small document provided containing a short tale in Pazar Laz and a glosed version of it as a png file taken from Ozturk & Pöchtrager (2011) grammar book)
+- Since the main corpus for Pazar Laz (with 111,365 tokens) consists of a private document, it is not published here, but to test the analyser, there is a small document provided containing a short tale in Pazar Laz and a glossed version of it as a png file taken from Ozturk & Pöchtrager (2011) grammar book)
 
 ### Error analysis:
 - Randomly selected 100 tokens that are not analyzed by the transducer are examined in terms of the reasons why they are not analyzed.  The results has shown that most of these words are Turkish or we have a missing lexeme in the lexc file.
