@@ -12,7 +12,7 @@ The study is based on the theory of finite-state morphology.  You can find a lin
 https://web.stanford.edu/group/cslipublications/cslipublications/site/1575864347.shtml
 
 ### HFST(Helsinki Finite-State Technology) toolkit 
-HFST command line tools are used to compile lexc and twol files into transducers.
+HFST command line tools are used to compile `lexc` and `twol` files into transducers.
 
 Follow the link below to install HFST
 
@@ -63,6 +63,7 @@ $ hfst-lookup -qp pazar.laz.mor.hfst < pazar.laz.tale.txt
 ### Language sources
 - Grammar books: (used to define morhotactic rules and mophophonological alternations)
 Öztürk, B. & M. Pöchtrager (Eds.) (2011). Pazar Laz. LINCOM: Languages of the World Materials 484, Münich: LINCOM EUROPA.
+
 Lacroix, R. (2009). Description du dialecte laze d’Arhavi (caucasique du sud, Turquie). Grammaire et textes(Doctoral dissertation, Université Lumière Lyon 2; xxii+901pp.)
 
 - Dictionary: (used to add lexemes into the lexcicon file)
