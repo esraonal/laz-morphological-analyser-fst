@@ -6,15 +6,18 @@ This is a project that proposes a finite-state morphological analyser for Pazar-
 ## Method and tools 
 ### Finite-state Morphology
 The study is based on the theory of finite-state morphology.  You can find a link to the book written by Kenneth R. Beesley and Lauri Karttunen.
+
 https://web.stanford.edu/group/cslipublications/cslipublications/site/1575864347.shtml
 
 ### HFST(Helsinki Finite-State Technology) toolkit 
 HFST command line tools are used to compile lexc and twol files into transducers.
 
 Follow the link below to install HFST
+
 https://github.com/hfst/hfst/wiki/Download-And-Install
 
 Check all HFST command line tools here
+
 https://github.com/hfst/hfst/wiki/Command-Line-Tools
 
 After installation, follow the steps
