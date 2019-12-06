@@ -49,14 +49,14 @@ An example
 xordza<n><erg>:xordzak
 ```
   
-#### 4. Invert a transducer
+#### 4. Invert the transducer (generator) to analyser 
 ```
 $ hfst-invert -i pazar.laz.gen.hfst -o pazar.laz.mor.hfst
 ```
 
-#### 5. Look up a set of input strings in the transducer and print the corresponding output strings.
+#### 5. Look up input strings in the transducer and print the corresponding output strings in the text file.
 ```
-$ hfst-lookup -qp pazar.laz.mor.hfst
+$ hfst-lookup -qp pazar.laz.mor.hfst < pazar.laz.tale.txt
 ```
 
 
