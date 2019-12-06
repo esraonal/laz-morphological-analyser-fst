@@ -56,14 +56,14 @@ $ hfst-lookup -qp pazar.laz.mor.hfst
 
 
 ### Language sources
-Grammar books: (used to define morhotactic rules and mophophonological alternations)
+- Grammar books: (used to define morhotactic rules and mophophonological alternations)
 Öztürk, B. & M. Pöchtrager (Eds.) (2011). Pazar Laz. LINCOM: Languages of the World Materials 484, Münich: LINCOM EUROPA.
 Lacroix, R. (2009). Description du dialecte laze d’Arhavi (caucasique du sud, Turquie). Grammaire et textes(Doctoral dissertation, Université Lumière Lyon 2; xxii+901pp.)
 
-Dictionary: (used to add lexemes into the lexcicon file)
+- Dictionary: (used to add lexemes into the lexcicon file)
 Didi Lazuri Nenapuna (Büyük Lazca Sözlük) by İsmail Bucaklişi, Hasan Uzunhasanoğlu, İrfan Aleksiva
 
-Other resources: (used to create a corpus to test the analyser on)
+- Other resources: (used to create a corpus to test the analyser on)
 Documents written in Laz are provided by Ismail Bucaklisi
 
 ### Results
@@ -71,11 +71,12 @@ Coverage:
 Currently up to 68% coverage over 111,365 tokens.
 
 ### Error analysis:
-Randomly selected 100 tokens that are not analyzed by the transducer are examined in terms of the reasons why they are not analyzed.  The results has shown that most of these words are Turkish or we have a missing lexeme in the lexc file.
+- Randomly selected 100 tokens that are not analyzed by the transducer are examined in terms of the reasons why they are not analyzed.  The results has shown that most of these words are Turkish or we have a missing lexeme in the lexc file.
 (details can be found in the paper)
 
 ### What is next?
-a gold standard corpus to test the analyser (we still do not know for sure that our analysis on word forms are correct) adding lexemes from all dialects
+- a gold standard corpus to test the analyser (we still do not know for sure that our analysis on word forms are correct)
+- adding lexemes from all dialects
 
 ### Challenges: (yet to be resolved)
-how to add dialectical differences??
+- how to add dialectical differences??
