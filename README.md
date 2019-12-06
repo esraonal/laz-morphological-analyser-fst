@@ -60,11 +60,11 @@ Currently up to 68% coverage over 111,365 tokens.
 Randomly selected 100 tokens that are not analyzed by the transducer are examined in terms of the reasons why they are not analyzed.  The results has shown that most of these words are Turkish or we have a missing lexeme in the lexc file.
 (details can be found in the paper)
 
-# # # What is next?
+### What is next?
 >> a gold standard corpus to test the analyser (we still do not know for sure that our analysis on word forms are correct)
 >> adding lexemes from all dialects
 >> 
 >> ???
 
-# # # Challenges: (yet to be resolved)
+### Challenges: (yet to be resolved)
 how to add dialectical differences??
